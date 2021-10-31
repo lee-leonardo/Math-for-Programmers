@@ -112,3 +112,53 @@ possibilities = [
 ]
 
 draw(Points(*possibilities))
+
+# 2.2.20
+# v + -v = 0
+# v = (a,b), -v = (-a,-b)
+# lengths are absolute values. Squares remove negative values
+# (c)^2 = (a)^2 + (b)^2
+# (-c)^2 = (-a)^2 + (-b)^2
+
+# 2.2.21
+# uhhh.
+
+# 2.2.22
+# v: (a,b) + u: (-a,-b) => (a+-a, b+-b) => (0,0) e.g. origin
+
+# 2.2.23
+# u: (-2, 0), v: (1.5, 1.5), w: (4, 1)
+# v-w: (-2.5, 0.5)
+# u-v: (-3.5, -1.5)
+# w-v: (2.5, -0.5)
+
+# 2.2.24
+def subtract(v1,v2):
+    return (v1[0] - v2[0], v1[1] - v2[0])
+
+# subtract((-2, 0), (1.5, 1.5)) # (-3.5, -1.5)
+
+# 2.2.25
+def distance(v1,v2):
+    return length(subtract(v1,v2))
+
+
+def perimeter(vectors):
+    length + len(vectors)
+    # % because we want the wrap around to 0
+    distances = [
+        distance(vectors[i], vectors[(i+1) % length])
+        for i in range(0, length)
+    ]
+    return sum(distances)
+
+perimeter([(0,0), (0,1), (1,1), (1,0)]) # 4
+perimeter(dino_vectors) #
+
+# 2.2.26
+# u: (1, -1)
+# v: (n, m), n > m, distance from u is 13.
+# find displacment of u, v
+# hint scan
+def findPoints(u,v):
+    pass

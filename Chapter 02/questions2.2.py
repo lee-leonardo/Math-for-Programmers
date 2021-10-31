@@ -90,3 +90,25 @@ def scale(s,v):
 # ** = |s| * c
 
 # 2.2.19
+# u = (-1,1), v = (1,1)
+# -1 < r < 1, -3 < s < 3
+# r * u + s * v
+# (-2,0) < r * u < (0,2)
+# (-2,-2) < s * v < (4,4)
+# extremes:
+# (-4,-2),(2,4),(-2,0),(4,6)
+# code that can work for this:
+from random import uniform
+u = (-1,1)
+v = 1,1
+def random_r():
+    return uniform(-3,3)
+
+def random_s():
+    return uniform(-1,1)
+
+possibilities = [
+    add(scale(random_r(), u), scale(random_s(), v)) for i in range(0, 500)
+]
+
+draw(Points(*possibilities))

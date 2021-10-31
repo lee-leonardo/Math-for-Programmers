@@ -160,5 +160,20 @@ perimeter(dino_vectors) #
 # v: (n, m), n > m, distance from u is 13.
 # find displacment of u, v
 # hint scan
-def findPoints(u,v):
-    pass
+
+# -12 < n < 14
+for n in range(-12,15):
+    # -14 < m < 12
+    for m in range(-14, 13):
+        if distance((n,m), (1,-1)) == 13 and n > m > 0:
+            print((n,m))
+
+def points_of_len(origin, length):
+    output = []
+
+    for n in range(origin[0] - distance, origin[0] + distance + 1):
+        for m in range(origin[1] - distance, origin[1] + distance + 1):
+            if distance((n,m), origin) == length:
+                output.append((n,m))
+
+    return output

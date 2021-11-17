@@ -1,9 +1,10 @@
+from math import cos, pi, sin, sqrt, tan
 from matplotlib.patches import Polygon
 from matplotlib.pyplot import grid
 from vectors import length
 
 # 2.2.27
-print(length(-1.34, 2.68))
+# print(length((-1.34, 2.68)))
 
 # 2.2.28
 # tan(22) ~= 0.4
@@ -31,3 +32,51 @@ print(length(-1.34, 2.68))
 # cos (90) = 0
 # sin (180) = 0
 # cos (180) = -1
+
+# 2.2.32
+# d = 1
+# print(sqrt(3)/2)
+# print(1 * sin(pi/3))
+# print((1/2)/1) # sin
+# print((sqrt(3)/2)/1) # cos
+# print((1/2)/(sqrt(3)/2)) # tan
+
+# print(float(1/2.0))
+# print(1 * cos(pi/3))
+
+# print(sqrt((0.5) ** 2 + (sqrt(3)/2) ** 2)) # is 1
+
+# 2.2.33
+# d = 1
+
+# print((sqrt(3)/2)/1) # sin
+# print((1/2.0)/1) # cos
+# print((sqrt(3)/2)/(1/2.0)) # tan
+
+# 2.2.34
+# print(cos((50.0/360.0) * 2 * pi)) # = 0.643
+# this assumes that the length of the hypotenuse is 1
+# therefore we just need to solve for x, x being the sine length.
+# we can use the pythagorean theorem to solve for x.
+
+# x = 1 ** 2 - 0.643 ** 2 
+# print(x)
+# print(sqrt(x))
+
+# 2.2.35
+# 1 radian = 57.296
+# 116.57 in radians then would be 116.57 / 57.296
+# y = 116.57 / 57.296
+# print(y)
+# print(tan(y))
+
+# 2.2.36
+# is 10*pi/6 positive or negative for sin and cos values?
+# guess: 10/6 is about 1 2/3, so positive cos, but negative sin
+
+# p = 10*pi/6
+# print(p)
+# print(sin(p))
+# print(cos(p))
+
+# 2.2.37

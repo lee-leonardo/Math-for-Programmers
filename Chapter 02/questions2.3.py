@@ -1,7 +1,11 @@
+import math
 from math import cos, pi, sin, sqrt, tan
 from matplotlib.patches import Polygon
 from matplotlib.pyplot import grid
 from vectors import length
+from vectors import to_cartesian
+from vector_drawing import draw
+from vector_drawing import Polygon
 
 # 2.2.27
 # print(length((-1.34, 2.68)))
@@ -80,3 +84,20 @@ from vectors import length
 # print(cos(p))
 
 # 2.2.37
+# polar_coords = [(cos(5*x*pi/500.0),2*pi*x/1000.0) for x in range(0,1000)]
+# vectors = [to_cartesian(p) for p in polar_coords]
+# draw(Polygon(*vectors, color=green))
+
+# 2.2.38
+# hypo = sqrt(13), x = -2, y = 3
+# sin (theta) = 3 / sqrt(13) ~= 0.832, arccosine(0.832)
+# cos (theta) = -2 / sqrt(13) ~= -0.554, arcsine(-0.554)
+# arcosine, and arcine, and arctangent does not work here, math.atan2 works with coordinate points thus can work.
+def to_polar(vector):
+    x, y = vector[0], vector[1]
+    angle = math.atan2(3, -2) # how you use the lib to get the angle
+    return (length(vector), angle)
+
+to_polar((-2, 3))
+
+# 2.2.39

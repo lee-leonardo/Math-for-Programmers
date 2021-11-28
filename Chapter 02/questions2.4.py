@@ -27,8 +27,8 @@ dino_vectors = [(6,4), (3,1), (1,2), (-1,5), (-2,5), (-3,4), (-4,4),
 
 draw(
     dino_vectors,
-    translate((8,8), rotate(5 * pi / 3, dino_vectors)),
-    rotate(5 * pi / 3, translate((8,8), dino_vectors))
+    translate((8,8), to_cartesian(rotate(5 * pi / 3, to_polar(dino_vectors)))),
+    to_cartesian(rotate(5 * pi / 3, to_polar(translate((8,8), dino_vectors))))
 )
 
 # no othey are not the same

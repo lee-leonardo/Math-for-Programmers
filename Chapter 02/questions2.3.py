@@ -83,6 +83,9 @@ from vector_drawing import Polygon
 # print(sin(p))
 # print(cos(p))
 
+# book 2.2.36
+# 10pi/6, pi/6 = 30, 30 * 10 = 300 
+
 # 2.2.37
 # polar_coords = [(cos(5*x*pi/500.0),2*pi*x/1000.0) for x in range(0,1000)]
 # vectors = [to_cartesian(p) for p in polar_coords]
@@ -101,11 +104,24 @@ def to_polar(vector):
 to_polar((-2, 3))
 
 # 2.2.39
+
+
+# 2.2.40
 to_polar((1,1)) # (sqrt(2), pi/4)
 to_polar((1,-1)) # (sqrt(2), -pi/4) # online is wrong, book is correct
 
-# 2.2.40
+# 2.2.41 (2.2.40)
 mouth = [(-5,2), (-2,2), (-5,1)]
 toe = [(0,-3), (-1,-4), (1,-4)]
 tail = [(3,1), (6,4), (5,1)]
 
+# mouth triangle dimensions
+# x = 1, y = 4
+
+# toe triangle dimensions
+# x = 1, y = 1
+
+# tail triangle dimensions
+# x = sqrt((3-1) ** 2 + (5-3) ** 2) -> sqrt(8)
+# y = sqrt( + )... f
+# better to measure manually than compute...

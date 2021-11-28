@@ -98,7 +98,7 @@ from vector_drawing import Polygon
 # arcosine, and arcine, and arctangent does not work here, math.atan2 works with coordinate points thus can work.
 def to_polar(vector):
     x, y = vector[0], vector[1]
-    angle = math.atan2(3, -2) # how you use the lib to get the angle
+    angle = math.atan2(x, y) # how you use the lib to get the angle
     return (length(vector), angle)
 
 to_polar((-2, 3))

@@ -101,3 +101,11 @@ def to_polar(vector):
 to_polar((-2, 3))
 
 # 2.2.39
+to_polar((1,1)) # (sqrt(2), pi/4)
+to_polar((1,-1)) # (sqrt(2), -pi/4) # online is wrong, book is correct
+
+# 2.2.40
+mouth = [(-5,2), (-2,2), (-5,1)]
+toe = [(0,-3), (-1,-4), (1,-4)]
+tail = [(3,1), (6,4), (5,1)]
+

@@ -1,10 +1,13 @@
-from math import sin, cos, pi
+from math import sin, cos, pi, sqrt
 from draw3d import draw3d, Arrow3D
 
 def add(*vectors):
     by_coordinate = zip(*vectors)
     coordinate_sums = [sum(coords) for coords in by_coordinate]
     return tuple(coordinate_sums)
+
+def length(v):
+    return sqrt(sum([coord ** 2 for coord in v]))
 
 # 3.3
 # (4,0,3) + (-1,0,1) = (3,0,4)
@@ -45,4 +48,19 @@ print(add(u, scale(0.5, add(v, scale(-1, u)))))
 # (1,1,1,1) = 2 <= sqrt(4) <= sqrt(1 ** 2 + 1 ** 2 + 1 ** 2 + 1 ** 2)
 
 # 3.9
+def vectors_with_whole_number_length(max_coord=100):
+    for x in range(1,max_coord):
+        for y in range(1, x+1):
+            for z in range(1,y+1):
+                if length((x,y,z)).is_integer():
+                    yield (x,y,z)
 
+print(vectors_with_whole_number_length())
+
+# 3.10
+point = (-1,-1,2)
+a = length(point)
+s = 1/length(point)
+n = scale(s, (point))
+m = length(n)
+print(m)
